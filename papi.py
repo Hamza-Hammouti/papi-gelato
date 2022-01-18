@@ -38,7 +38,7 @@ def bakjeOfHoorn():
 
 #-------------------------------------------------------------------------------------#
 
-print("Welkom bij Papi Gelato je mag alle smaken kiezen zolang het maar vanille ijs is.")
+print("Welkom bij Papi Gelato.")
 
 aantalBolletjes = bolletjesKiezen()
 
