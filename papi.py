@@ -36,26 +36,46 @@ def bakjeOfHoorn():
     elif aantalBolletjes >=4 and aantalBolletjes <= 8:
         print(f"Dan krijgt u van mij een bakje met {aantalBolletjes} bolletjes")
 
+def toppings():
+    toppingKeuze = input("Wat voor topping wilt u: A) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus?: ").lower()
+    global aantalBolletjes
+    if toppingKeuze == "a":
+        prijsTopping = 0
+    elif toppingKeuze == "b":
+        prijsTopping = 0.50
+    elif toppingKeuze == "c":
+        prijsTopping = 0.30 * aantalBolletjes
+    elif toppingKeuze == "d" and bakofhoorn == "a":
+        prijsTopping = 0.60
+    elif toppingKeuze == "d" and bakofhoorn == "b":
+        prijsTopping = 0.90
+    return prijsTopping
+
 def bonnetje():
     print("---------[Papi Gelato]---------")
     print("")
     print(f"Bolletjes       {aantalBolletjes} x €1.10   = €{round(aantalBolletjes * 1.10, 2)}")
     if bakofhoorn == "a":
         print("Hoorntje        1 x €1.25   = €1.25")
-        totaalPrijs = aantalBolletjes * 1.10 + 1.25
+        totaalPrijs = aantalBolletjes * 1.10 + 1.25 + prijsTopping
     elif bakofhoorn == "b":
         print("Bakje           1 x €0.75   = €0.75")
-        totaalPrijs = aantalBolletjes * 1.10 + 0.75
+        totaalPrijs = aantalBolletjes * 1.10 + 0.75 + prijsTopping
+    if prijsTopping >= 0.1:
+        print(f"Topping         1 x {round(prijsTopping , 2)}     = {round(prijsTopping , 2)}" )
     print("                           -------- +")
     print(f"Totaal                        €{round(totaalPrijs, 2)}")
+
 #-------------------------------------------------------------------------------------#
 
 print("Welkom bij Papi Gelato.")
 
 aantalBolletjes = bolletjesKiezen()
 
-smakenBolletjes(aantalBolletjes)
+smakenBolletjes(aantalBolletjes)    
 
 bakofhoorn = bakjeOfHoorn()
+
+prijsTopping = toppings()
 
 bonnetje()
