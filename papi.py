@@ -36,6 +36,18 @@ def bakjeOfHoorn():
     elif aantalBolletjes >=4 and aantalBolletjes <= 8:
         print(f"Dan krijgt u van mij een bakje met {aantalBolletjes} bolletjes")
 
+def bonnetje():
+    print("---------[Papi Gelato]---------")
+    print("")
+    print(f"Bolletjes       {aantalBolletjes} x €1.10   = €{round(aantalBolletjes * 1.10, 2)}")
+    if bakofhoorn == "a":
+        print("Hoorntje        1 x €1.25   = €1.25")
+        totaalPrijs = aantalBolletjes * 1.10 + 1.25
+    elif bakofhoorn == "b":
+        print("Bakje           1 x €0.75   = €0.75")
+        totaalPrijs = aantalBolletjes * 1.10 + 0.75
+    print("                           -------- +")
+    print(f"Totaal                        €{round(totaalPrijs, 2)}")
 #-------------------------------------------------------------------------------------#
 
 print("Welkom bij Papi Gelato.")
@@ -44,4 +56,6 @@ aantalBolletjes = bolletjesKiezen()
 
 smakenBolletjes(aantalBolletjes)
 
-bakjeOfHoorn() 
+bakofhoorn = bakjeOfHoorn()
+
+bonnetje()
