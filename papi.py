@@ -12,6 +12,15 @@ def bolletjesKiezen():
         else:
             print("Sorry, dat snap ik niet..")
 
+def smakenBolletjes(aantalBolletjes):
+    amount = 1
+    while amount <= aantalBolletjes:
+        smaakje = input(f"Welke smaak wilt u voor bolletje nummer {amount}? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?: ").lower()
+        if smaakje == "a" or smaakje == "c" or smaakje == "m" or smaakje == "v":
+            amount += 1
+        else:
+            print("Sorry, dat snap ik niet..")
+
 def bakjeOfHoorn():
     if aantalBolletjes <= 3:
         while True:
@@ -27,12 +36,12 @@ def bakjeOfHoorn():
     elif aantalBolletjes >=4 and aantalBolletjes <= 8:
         print(f"Dan krijgt u van mij een bakje met {aantalBolletjes} bolletjes")
 
-
-    
-
 #-------------------------------------------------------------------------------------#
 
 print("Welkom bij Papi Gelato je mag alle smaken kiezen zolang het maar vanille ijs is.")
+
 aantalBolletjes = bolletjesKiezen()
+
+smakenBolletjes(aantalBolletjes)
 
 bakjeOfHoorn() 
