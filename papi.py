@@ -37,19 +37,26 @@ def bakjeOfHoorn():
         print(f"Dan krijgt u van mij een bakje met {aantalBolletjes} bolletjes")
 
 def toppings():
-    toppingKeuze = input("Wat voor topping wilt u: A) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus?: ").lower()
     global aantalBolletjes
-    if toppingKeuze == "a":
-        prijsTopping = 0
-    elif toppingKeuze == "b":
-        prijsTopping = 0.50
-    elif toppingKeuze == "c":
-        prijsTopping = 0.30 * aantalBolletjes
-    elif toppingKeuze == "d" and bakofhoorn == "a":
-        prijsTopping = 0.60
-    elif toppingKeuze == "d" and bakofhoorn == "b":
-        prijsTopping = 0.90
-    return prijsTopping
+    while True:
+        toppingKeuze = input("Wat voor topping wilt u: A) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus?: ").lower()
+        if toppingKeuze == "a":
+            prijsTopping = 0
+            return prijsTopping
+        elif toppingKeuze == "b":
+            prijsTopping = 0.50
+            return prijsTopping
+        elif toppingKeuze == "c":
+            prijsTopping = 0.30 * aantalBolletjes
+            return prijsTopping
+        elif toppingKeuze == "d" and bakofhoorn == "a":
+            prijsTopping = 0.60
+            return prijsTopping
+        elif toppingKeuze == "d" and bakofhoorn == "b":
+            prijsTopping = 0.90
+            return prijsTopping
+        else:
+            print("Sorry, dat snap ik niet..")
 
 def bonnetje():
     print("---------[Papi Gelato]---------")
