@@ -42,8 +42,8 @@ def bolletjesKiezen():
 def smakenBolletjes(aantalBolletjes):  
     amount = 1
     while amount <= aantalBolletjes:
-        smaakje = input(f"Welke smaak wilt u voor {bolOfLiter} nummer {amount}? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?: ").lower()
-        if smaakje == "a" or smaakje == "c" or smaakje == "m" or smaakje == "v":
+        smaakje = input(f"Welke smaak wilt u voor {bolOfLiter} nummer {amount}? A) Aardbei, C) Chocolade of V) Vanille?: ").lower()
+        if smaakje == "a" or smaakje == "c" or smaakje == "v":
             amount += 1
         else:
             print("Sorry, dat is geen optie die we aanbieden..")
