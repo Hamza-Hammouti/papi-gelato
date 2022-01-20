@@ -17,7 +17,7 @@ def partOfZak():
             bolOfLiter = "liter"
             return klantType
         else:
-            print("Sorry, dat snap ik niet..")
+            print("Sorry, dat is geen optie die we aanbieden..")
 
 def bolletjesKiezen():
     while True:
@@ -30,14 +30,14 @@ def bolletjesKiezen():
             elif aantalBolletjes > 8:
                 print("Sorry, zulke grote bakken hebben we niet")
             else:
-                print("Sorry, dat snap ik niet..")
+                print("Sorry, dat is geen optie die we aanbieden..")
 
         elif bolOfLiter == "liter":
             aantalLiters = aantalBolletjes
             if aantalLiters >= 1:
                 return aantalLiters
             else:
-                print("Sorry, dat snap ik niet..")
+                print("Sorry, dat is geen optie die we aanbieden..")
 
 def smakenBolletjes(aantalBolletjes):  
     amount = 1
@@ -46,7 +46,7 @@ def smakenBolletjes(aantalBolletjes):
         if smaakje == "a" or smaakje == "c" or smaakje == "m" or smaakje == "v":
             amount += 1
         else:
-            print("Sorry, dat snap ik niet..")
+            print("Sorry, dat is geen optie die we aanbieden..")
 
 def bakjeOfHoorn():
     global totaalHoorn
@@ -63,7 +63,7 @@ def bakjeOfHoorn():
                 totaalBakje += 1
                 return bakofhoorn
             else:
-                print("Sorry, dat snap ik niet..")
+                print("Sorry, dat is geen optie die we aanbieden..")
     elif aantalBolletjes >=4 and aantalBolletjes <= 8:
         print(f"Dan krijgt u van mij een bakje met {aantalBolletjes} bolletjes")
         bakofhoorn = "bakje"
@@ -84,7 +84,7 @@ def extraBestellen():
             print("Bedankt en tot ziens!")
             return extra
         else:
-            print("Sorry, dat snap ik niet..")
+            print("Sorry, dat is geen optie die we aanbieden..")
 
 def toppings():
     global aantalBolletjes
@@ -106,15 +106,15 @@ def toppings():
             prijsTopping = 0.90
             return prijsTopping
         else:
-            print("Sorry, dat snap ik niet..")
+            print("Sorry, dat is geen optie die we aanbieden..")
 
 def bonnetje():
     print("---------[Papi Gelato]---------")
     print("")
     if klantType == 1:
-        totaalPrijs = totaalBolletjes * 1.10 + totaalHoorn * 1.25 + totaalTopping + totaalBakje * 0.75
+        totaalPrijs = totaalBolletjes * 0.95 + totaalHoorn * 1.25 + totaalTopping + totaalBakje * 0.75
         if aantalBolletjes >= 1:
-            print(f"Bolletjes       {totaalBolletjes} x €1.10   = €{round(totaalBolletjes * 1.10, 2)}")
+            print(f"Bolletjes       {totaalBolletjes} x €0.95   = €{round(totaalBolletjes * 0.95, 2)}")
         if totaalHoorn >= 1:
             print(f"Hoorntje        {totaalHoorn} x €1.25   = €{totaalHoorn * 1.25}")
         if totaalBakje >= 1:
