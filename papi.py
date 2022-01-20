@@ -128,7 +128,7 @@ def bonnetje():
             print(f"Liter       {aantalLiters} x 9.80   = €{round(aantalLiters * 9.80, 2)}")
             totaalPrijs = aantalLiters * 9.80
         print(f"Totaal                   €{round(totaalPrijs, 2)}")
-        print(f"BTW (9%)                 €{round(totaalPrijs / 100 * 9, 2)}")
+        print(f"BTW (6%)                 €{round(totaalPrijs / 100 * 6, 2)}")
 #-------------------------------------------------------------------------------------#
 print("Welkom bij Papi Gelato.") 
 klantType = partOfZak()
